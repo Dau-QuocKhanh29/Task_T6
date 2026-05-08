@@ -1,0 +1,216 @@
+.voucher-usage-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.voucher-usage-container h2 {
+  color: #333;
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.voucher-usage-container h3 {
+  color: #666;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+  font-weight: 600;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.usage-form {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.select-dropdown {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.select-dropdown:hover {
+  border-color: #667eea;
+}
+
+.select-dropdown:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.selected-info {
+  margin-top: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 4px;
+  border-left: 4px solid #667eea;
+}
+
+.selected-info p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.selected-info strong {
+  color: #333;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.btn-use-voucher {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-use-voucher:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-use-voucher:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.usage-history {
+  margin-top: 30px;
+}
+
+.usages-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usages-table thead {
+  background: #f5f5f5;
+}
+
+.usages-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.usages-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.usages-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.loading,
+.no-data {
+  text-align: center;
+  padding: 30px;
+  color: #999;
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  .form-section {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .btn-use-voucher {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .voucher-usage-container {
+    padding: 20px;
+  }
+
+  .usage-form {
+    padding: 15px;
+  }
+
+  .usages-table {
+    font-size: 13px;
+  }
+
+  .usages-table th,
+  .usages-table td {
+    padding: 10px;
+  }
+}
